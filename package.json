@@ -1,6 +1,6 @@
 {
   "name": "getpayload",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unify responses and errors payloads for `fetch` requests",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
