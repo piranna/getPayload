@@ -7,6 +7,9 @@ function getPayload(res)
     if(contentType.includes("application/json"))
       return res.json()
 
+    if(contentType.includes("multipart/form-data"))
+      return res.formData()
+
     return res.text()
   }
 
