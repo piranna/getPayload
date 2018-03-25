@@ -21,7 +21,12 @@ function getPayload(res)
 function getPayloadError(res)
 {
   return getPayload(res)
-  .then(payload => res.ok ? payload : Promise.reject(payload))
+  .then(function(payload)
+  {
+    if(res.ok) return payload
+
+    return Promise.reject(payload)
+  })
 }
 
 
