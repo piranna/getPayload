@@ -23,9 +23,9 @@ function getPayloadError(res)
   return getPayload(res)
   .then(function(payload)
   {
-    if(res.ok) return payload
+    if(!res.ok) throw payload
 
-    return Promise.reject(payload)
+    return payload
   })
 }
 
